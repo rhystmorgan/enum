@@ -1,0 +1,92 @@
+{
+  "preamble": {
+    "title": "rhystmorgan/enum",
+    "description": "Aiken contracts for project 'rhystmorgan/enum'",
+    "version": "0.0.0",
+    "plutusVersion": "v2",
+    "compiler": {
+      "name": "Aiken",
+      "version": "v1.0.20-alpha+49bd4ba"
+    },
+    "license": "Apache-2.0"
+  },
+  "validators": [
+    {
+      "title": "enum.emint",
+      "redeemer": {
+        "title": "r",
+        "schema": {
+          "$ref": "#/definitions/enum~1EAction"
+        }
+      },
+      "compiledCode": "5901890100003232323232323232322232533300632323232533300a3370e90001804000899191919191919191919299980b980d0010991919299980b99b87480000044cdc380124004266e1c00920013014013375a602e0046eb8c05400458c060004c8cc88c94ccc058cdc3a4004002200426eacc06cc05400cc04c008c8cc004004008894ccc0600045300103d87a800013232323253330193371e01c004266e9520003301d374c00297ae0133006006003375660340066eb8c060008c070008c0680052f5bded8c0646600200200444a66602e002297adef6c6013232323253330183371e91100002100313301c337606ea4008dd3000998030030019bab3019003375c602e004603600460320026eacc058004c058004c054004c050004c04c004c02c014dd7180800098048008b18070009807001180600098028010a4c26cac64a66600c66e1d200000115333009300500314985854ccc018cdc3a40040022a666012600a0062930b0b1801801118021baa001230043754002ae6955ceaab9e5573eae815d0aba201",
+      "hash": "f30d4051c1ba13db1c3c0f7835a1a731297e5429030fea9366d4fa8e"
+    },
+    {
+      "title": "enum.eval",
+      "datum": {
+        "title": "d",
+        "schema": {
+          "$ref": "#/definitions/enum~1EDatum"
+        }
+      },
+      "redeemer": {
+        "title": "r",
+        "schema": {
+          "$ref": "#/definitions/enum~1EAction"
+        }
+      },
+      "parameters": [
+        {
+          "title": "p",
+          "schema": {
+            "$ref": "#/definitions/ByteArray"
+          }
+        }
+      ],
+      "compiledCode": "59015a0100003232323232323232322322223232533300a32323232533300e3370e9001180680089919191919191919299980b19b87480000044c8cc00400400c894ccc06c00452809919299980d199119198008008019129998108008a501323253330203371e00400a29444cc010010004c094008dd718118009991911801000980080091299980f8008a5eb804cc080c074c084004cc008008c088004dd5980f9810180c00100b0a51133004004001301f002301d00114a2602801e6eb0c064004c064004c060008dd6180b0009807002980a00098060008b18090009809001180800098040018a4c26cac64a66601466e1d20000011533300d300800414985854ccc028cdc3a40040022a66601a60100082930b0b180400199299980499b87480000044c8c94ccc038c04400852616375a601e002600e0082c600e0066eb80048c014dd5000918019baa0015734aae7555cf2ab9f5740ae855d101",
+      "hash": "c743cbdd3649d94871e4c0f1c62a6ab3b42e81594980166c996ad666"
+    }
+  ],
+  "definitions": {
+    "ByteArray": {
+      "dataType": "bytes"
+    },
+    "Int": {
+      "dataType": "integer"
+    },
+    "enum/EAction": {
+      "title": "EAction",
+      "anyOf": [
+        {
+          "title": "Alpha",
+          "dataType": "constructor",
+          "index": 0,
+          "fields": []
+        },
+        {
+          "title": "Beta",
+          "dataType": "constructor",
+          "index": 1,
+          "fields": []
+        }
+      ]
+    },
+    "enum/EDatum": {
+      "title": "EDatum",
+      "anyOf": [
+        {
+          "title": "EDatum",
+          "dataType": "constructor",
+          "index": 0,
+          "fields": [
+            {
+              "title": "a",
+              "$ref": "#/definitions/Int"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
